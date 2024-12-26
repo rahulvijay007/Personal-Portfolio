@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0e172a;
+      --bg-light: #e3e6f0;
+      --text-dark: #ffffff;
+      --text-light: #333333;
+      --primary-accent-dark: #4fa3d1;
+      --primary-accent-light: #0056b3;
+      --card-bg-dark: #1c2942;
+      --card-bg-light: #ffffff;
+      --shadow-dark: rgba(0, 0, 0, 0.7);
+      --shadow-light: rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.light-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      box-shadow: 0 3px 6px var(--shadow-dark);
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-accent-dark);
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      transform: translateY(-3px);
+      color: var(--primary-accent-light);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .projects-section {
+      margin-top: 80px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-card {
+      background: var(--card-bg-dark);
+      color: var(--text-dark);
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px var(--shadow-dark);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px var(--shadow-dark);
+    }
+
+    body.light-mode .project-card {
+      background: var(--card-bg-light);
+      color: var(--text-light);
+      box-shadow: 0 4px 12px var(--shadow-light);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: var(--primary-accent-dark);
+    }
+
+    body.light-mode h1 {
+      color: var(--primary-accent-light);
+    }
+
+    .project-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-accent-dark);
+    }
+
+    body.light-mode .project-card h2 {
+      color: var(--primary-accent-light);
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: var(--text-dark);
+    }
+
+    body.light-mode footer {
+      color: var(--text-light);
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <a href="Homepage.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="licenses.html">Licenses & Certifications</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h1>Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h2><a href="teaching-genie.html">Teaching Genie</a></h2>
+      <p>
+        A personalized AI-based educational platform that adapts teaching methods to students' needs. Features
+        include interactive dashboards, personalized learning paths, and voice/text-based user interfaces.
+      </p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h2><a href="speech-triage.html">The Speech Triage</a></h2>
+      <p>
+        An automated voice-based system for hospitals in India, capable of identifying symptoms and
+        recommending suitable doctors using deep learning and NLP.
+      </p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h2><a href="mindmate.html">Mindmate</a></h2>
+      <p>
+        A chatbot for mental health counseling leveraging natural language processing and sentiment
+        analysis to simulate empathetic, human-like interactions.
+      </p>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <h2><a href="expiry-tracker.html">Automated Expiry Date Tracking System</a></h2>
+      <p>
+        Integrates barcode scanners with ML to track expiry dates, reduce food waste, and provide
+        automated reminders and recipe suggestions.
+      </p>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <h2><a href="nasa-challenge.html">NASA Space Apps Challenge</a></h2>
+      <p>
+        Developed a web app to compare Landsat reflectance data with ground-based observations, offering
+        real-time notifications and data filtering for researchers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Rahul Vijay. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      }
+    }
+  </script>
+</body>
+
+</html>
